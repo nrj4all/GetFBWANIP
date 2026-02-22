@@ -6,7 +6,7 @@ $version = isset($_GET['ip']) ? $_GET['ip'] : 'v4';   // v4 (Default) oder v6
 $version = strtolower($version) === 'v6' ? 'v6' : 'v4';
 
 // --- Basis-Parameter ------------------------------------------------------
-$host       = 'http://10.0.0.1:49000'; // URL der FritzBox TR-064 SOAP Schnittstelle
+$host       = 'http://fritz.box:49000'; // URL der FritzBox TR-064 SOAP Schnittstelle
 $charset    = 'utf-8';
 $envelope_ns = 'http://schemas.xmlsoap.org/soap/envelope/';
 $service_ns = 'urn:schemas-upnp-org:service:WANIPConnection:1';
@@ -14,7 +14,7 @@ $service_ns = 'urn:schemas-upnp-org:service:WANIPConnection:1';
 // Fritzbox Zugangsdaten (falls eingerichtet)
 $username = '';       // Benutzername
 $password = '';       // Passwort
-$logfile  = '/home/webserver/logs/fritzbox_log.txt';
+$logfile  = './fritzbox_log.txt';
 
 // Service-URL (f���r v4 und v6 identisch bei aktuellen Fritz!Boxen)
 $serviceUrl = $host . '/igdupnp/control/WANIPConn1';
